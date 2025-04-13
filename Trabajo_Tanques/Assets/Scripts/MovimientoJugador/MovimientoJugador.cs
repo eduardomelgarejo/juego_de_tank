@@ -7,22 +7,33 @@ public class MovimientoJugador : MonoBehaviour
     public CharacterController controladorPersonaje;
     public float velocidad = 12f;
 
+    public Transform groundCheck;
+    public float radioEsfera = 0.3f;
+    public LayerMask mascaraSuelo;
+    private bool estaEnSuelo;
+
     void Update()
     {
+        Chequear_suelo();
+
         float entradaX = Input.GetAxis("Horizontal");
         float entradaZ = Input.GetAxis("Vertical");
 
-        // Calcular la dirección de movimiento solo en X y Z
         Vector3 direccionMovimiento = transform.right * entradaX + transform.forward * entradaZ;
-        direccionMovimiento *= velocidad * Time.deltaTime;
 
-        // Aquí viene la clave: mantener la altura constante sin tocar transform.position
-        // Vamos a mover al personaje manualmente solo en X y Z
-        Vector3 nuevaPosicion = controladorPersonaje.transform.position + direccionMovimiento;
-        nuevaPosicion.y = 0.96f;
+        controladorPersonaje.Move(direccionMovimiento * velocidad * Time.deltaTime);
 
-        controladorPersonaje.enabled = false; // Desactivamos el CharacterController temporalmente
-        controladorPersonaje.transform.position = nuevaPosicion; // Asignamos la nueva posición con Y fija
-        controladorPersonaje.enabled = true; // Lo volvemos a activar
+        
+        if (estaEnSuelo)
+        {
+            Vector3 posicionCorregida = controladorPersonaje.transform.position;
+            posicionCorregida.y = 0.96f;
+            controladorPersonaje.transform.position = posicionCorregida;
+        }
+    }
+
+    void Chequear_suelo()
+    {
+        estaEnSuelo = Physics.CheckSphere(groundCheck.position, radioEsfera, mascaraSuelo);
     }
 }

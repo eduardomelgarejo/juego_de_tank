@@ -25,7 +25,7 @@ public class Ai : MonoBehaviour
         float distancia = Vector3.Distance(transform.position, player.transform.position);
         
 
-        if (distancia <= 60f)
+        if (distancia <= 90f)
         {
             puedeMoverse = true; 
         }
