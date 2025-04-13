@@ -348,6 +348,8 @@
 "Assets/Scripts/Camara/RotacionCamara.cs"
 "Assets/Scripts/Disparo/Disparar.cs"
 "Assets/Scripts/Enemigo/EnemigoColision.cs"
+"Assets/Scripts/Enemigo/Tanques.cs"
+"Assets/Scripts/Ia/Ai.cs"
 "Assets/Scripts/MovimientoJugador/MovimientoJugador.cs"
 -langversion:9.0
 /deterministic

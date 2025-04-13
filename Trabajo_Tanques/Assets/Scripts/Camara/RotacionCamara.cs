@@ -19,9 +19,7 @@ public class RotacionCamara : MonoBehaviour
     void Update()
     {
         float movimientoRatonX = Input.GetAxis("Mouse X") * sensibilidadRaton * Time.deltaTime;
-        
 
-       
         rotacionX = Mathf.Clamp(rotacionX, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(rotacionX, 0f, 0f);
