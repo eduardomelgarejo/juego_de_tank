@@ -18,7 +18,7 @@ Controlás un tanque en una plataforma tipo laberinto 3D. Debés buscar y destru
 ## 🧱 Características Implementadas
 
 ✅ 1. **Escenario tipo laberinto 3D** construido con objetos simples organizados en jerarquías.  
-✅ 2. **Tanque controlable** con rotación y desplazamiento; puede apuntar y destruir objetivos usando colisiones.  
+✅ 2. **Tanque controlable** con rotación y desplazamiento; destruir objetivos usando colisiones.  
 ✅ 3. **Objetivos en movimiento**: se desplazan entre puntos definidos usando funciones matemáticas.  
 ✅ 4. **Spawns aleatorios**: los objetivos aparecen en 5 posiciones definidas aleatoriamente al iniciar el juego.  
 ✅ 5. **Materiales básicos aplicados** a tanques, paredes, proyectiles, pisos y objetivos.  
@@ -30,6 +30,15 @@ Controlás un tanque en una plataforma tipo laberinto 3D. Debés buscar y destru
 ✅ 8. **Proyecto versionado con Git**  
 ✅ 9. `.gitignore` configurado para proyectos Unity  
 ✅ 10. Proyecto subido a [GitHub](https://github.com/eduardomelgarejo/juego_de_tank.git) ✅
+
+## 🧱 Como moverse
+
+tecla w: hacia adelante
+tecla d: hacia la derecha
+tecla a: para la izquierda
+tecla s: para la derecha
+
+click izquierdo:disparar 
 
 ---
 
