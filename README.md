@@ -1,6 +1,6 @@
 # 🛡️ Battle City 3D - Mini Juego con Tanques
-Integrantes : Mathias Muñoz
-              Nicolas San Martin
+Integrantes : Mathias Muñoz,
+              Nicolas San Martin,
               Eduardo Melgarejo
               
 Docente: RODRIGO ALEXIS VENEGAS MUÑOZ
